@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday eruma 🤍</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Segoe UI,sans-serif;
+  height:100vh;
+  overflow:hidden;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  background:#fff;
+  width:92%;
+  max-width:420px;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  animation:pop 1s ease;
+  z-index:2;
+}
+
+@keyframes pop{
+  from{transform:scale(.8);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+h1{color:#ff4d6d}
+p{font-size:14px;line-height:1.6;color:#333}
+
+.hidden{display:none}
+
+button{
+  margin-top:15px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+}
+
+/* cake */
+.cake{
+  font-size:60px;
+  animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+  from{text-shadow:0 0 10px #ff4d6d}
+  to{text-shadow:0 0 35px #ff9a9e}
+}
+
+/* slider */
+.slider{
+  width:100%;
+  height:260px;
+  border-radius:15%;
+  overflow:hidden;
+  margin:15px auto;
+  border:3px solid #ff4d6d;
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+.slider img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  opacity:0;
+  transition:opacity 1.5s ease;
+}
+.slider img.active{opacity:1}
+
+/* confetti */
+.confetti{
+  position:absolute;
+  width:8px;height:8px;
+  top:-10px;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg)}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgm" loop>
+  <source src="song.mpeg" type="audio/mpeg">
+</audio>
+
+<div class="card">
+
+<!-- STEP 1 : BIRTHDAY -->
+<div id="step1">
+  <div class="cake">🎂</div>
+  <h1>Happy Birthday eruma 💕</h1>
+  <p>INTHA NAAL ENNAKU ROMBA SPL DII AMMU🫂🥹</p>
+  <P>CLICK NEXT BUTTON </P>
+</div>
+
+<!-- STEP 2 : PHOTO SLIDER -->
+<div id="step2" class="hidden">
+  <div class="slider">
+    <img src="subha.jpg" class="active">
+    <img src="fav1.jpeg">
+    <img src="fav6.jpeg">
+    <img src="FAV5.jpeg">
+    <img src="fav4.jpeg">
+  </div>
+  <p>ENNAKU ROMBA PUDICHA EN AMMU FAV PIC💕🫂.</p>
+</div>
+
+<!-- STEP 3+ : MESSAGES -->
+<p id="s1" class="hidden">
+FIRST EN AMMU VAA ENNAKU FRIEND AHH🫂 <br>
+ROMBA PUDICHATHU💕<br>
+APRM EN ERUMAIYA YARUKAGAVUM VIDU KUDUKA KUDATHUNU NENACHA EN AMMU ENNAKU MATTU THA FRIEND AH IRUKANUM NENACHA NAA💯💞<br>
+ENNA NADATHALUM EN SUBHA KUDATHA IRUKANUM MUDIVU PANNA NAN💕😘
+
+</p>
+
+<p id="s2" class="hidden">
+EN SUBHA KUDA MARAKA MUDIYATHA MEMORIES NERAIYA IRUKU<br>
+<br>
+ENNAKU KEDACHA DIOMOND THANGAM POOKKISAM ELLAME EVA THA LOVE YOU ERUMA😘💞<BR>
+ENNODA BEST MOMENT VANTHU SUBHA ENNAKU PROPOSE PANNATHU THAN💕😍<br>
+MARAKA MUDIYATHA MOMENT(25.10.2025) EN SUBHA ENNAKU PROPOSE PANNA DATE</p>
+
+<p id="s3" class="hidden">
+EN LIFE LAA ROMBA WORST AANA DAYS EPO NAA (DEC(18 TO FEB 4)VARIKUM<br>
+APRM IMPORTANT ONU IRUKU AATHU FEB(05).<br>
+AATHU ENNANU UNNAKE THERIYUM 💔❤️‍🩹 AATHA NAA ORU NAALUM MARAKA MATEN DII🥹🥺<BR>
+AATHA NENACHI ORU ORU NAAL NE V2KU POOGUM POTHUM NEE NXT DAY VANTHU ENKETTA SOLLIDUVIYA NU BAYATHUDU IRUKEN DII🥹💔  
+</p>
+
+<p id="s4" class="hidden">
+ENNA AANALUM UNNA MISS PANNITA MATEN NAA OK💕❤️‍🩹 <br>
+BECAUSE I LOVE YOU subha💕😘<br>
+SHE IS MY DEAR PARTNER AND REAL SOULMATE ALSO<br><br>
+NEE NAA ENNAKU ROMBA ROMBA PUDIKUM ERUMA EVALO PIDIKUM NU SOLLANUM NA INFINITY OK VA NE KEPA EVALO PUDIKUM NU AATHU THAN NANE SOLLITEN💕😍<BR>
+NAA ETHACHAM UNNA HURT THAA ENNA MANICHIRU SORRY DII PONDATI🥺🫂
+</p>
+
+<p id="hiddenMsg" class="hidden">
+ENNA VITTU POITATHA SUBHA ENKUDAIYE IRU DII AMMU🫳🫰<br>
+I LOVE YOU AMMU I LOVE YOU SO MUCH THANGAMEYYY💕😘.<br><br>
+UNKETTA ONU KEKANUM DII SIKKARAMA NAA UNKUDA HUSHAND UN BIRTHDAY CELEBRATE PANNANUM AASAIYA IRUKU DII AMMU🥹❤️‍🩹<br>
+SIKKARAMA MARRIAGE PANNIKALAM AMMU ENNALA UNNA VITU IRUKA MUDIYALA ORU NAAL KUDA NEEMMATHIYA THOONGA MUDIYALA AMMU🥺❤️‍🩹
+VITRATHA DII ENNA🥹🥹<br><br>
+I LOVE YOU DII AMMU💕🫳.<br>
+UNNA NALLA PATHUKURA DII AMMU ENNA NADATHALUM UNNA VITU POGAMATEN DII NEEYUM ENNA VITU POITATHA SERIYAA💕❤️‍🩹.<br>
+ONCE AGAIN MANY MORE HAPPY RETURNS OF THE DAY MY DEAR PONDATI💕😘🫂
+</p>
+
+<button onclick="next()">Next ❤️</button>
+
+</div>
+
+
+<script>
+let stage=1;
+let msg=1;
+let slides=document.querySelectorAll(".slider img");
+let si=0;
+
+function next(){
+  if(stage===1){
+    document.getElementById("bgm").play();
+    confetti();
+    document.getElementById("step1").classList.add("hidden");
+    document.getElementById("step2").classList.remove("hidden");
+    startSlider();
+    stage=2;
+    return;
+  }
+  if(stage===2){
+    document.getElementById("step2").classList.add("hidden");
+    document.getElementById("s1").classList.remove("hidden");
+    stage=3;
+    return;
+  }
+
+  if(msg<=4){
+    document.getElementById("s"+msg).classList.add("hidden");
+    msg++;
+    if(msg<=4) document.getElementById("s"+msg).classList.remove("hidden");
+    else document.getElementById("hiddenMsg").classList.remove("hidden");
+  }
+}
+
+function startSlider(){
+  setInterval(()=>{
+    slides[si].classList.remove("active");
+    si=(si+1)%slides.length;
+    slides[si].classList.add("active");
+  },1800);
+}
+
+function confetti(){
+  for(let i=0;i<70;i++){
+    let c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=`hsl(${Math.random()*360},100%,50%)`;
+    c.style.animationDuration=(Math.random()*3+2)+"s";
+    document.body.appendChild(c);
+  }
+}
+</script>
+
+</body>
+</html>
